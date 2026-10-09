@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: orange;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            padding: 50px;
+            
+            
+        }
+        .hero{
+            /* margin-top: 30px; */
+            padding: 70px;
+            background-color: black;
+            color: brown;
+
+            
+        }
+        h2{
+            text-align: center;
+            display:block;
+
+        }
+
+        .products{
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px; 
+            
+            
+        }
+        .product{
+            background-color: blue;
+            width: 150px;
+            height: 200px;
+            text-align: center;
+            width: 150px;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+        .product:hover{
+            transform: translateY(-5px);
+        }
+        .product img{
+            width: 100%;
+            border-radius: 10%;
+        }
+        .product:nth-child(odd){
+            background: green;
+        }
+        .product:nth-child(even){
+            background: yellow;
+        }
+        footer{
+            background-color: peru;
+            text-align: center;
+            padding: 40px 0;
+            width: 100%;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍩 SweetBite Bakery</h1>
+        <p>Freshly baked happiness every day!</p>
+    </header>
+
+    <section class="hero">
+        <h2>Our special Treats 😋</h2>
+    </section>
+
+    <section class="products">
+        <div class="product">
+            <img src="soft bread.jpg" alt="">
+            <p>Soft Milk Bread</p>
+        </div>
+        <div class="product">
+            <img src="chocolate.jpg" alt="">
+            <p>chocolate donuts</p>
+        </div>
+        <div class="product">
+            <img src="strawberry.jpg" alt="">
+            <p>strawberry Cupcake</p>
+        </div>
+        <div class="product">
+            <img src="butter.jpg" alt="">
+            <p>Butter Croissant</p>
+        </div>
+        <div class="product">
+            <img src="Apple pie.jpg" alt="">
+            <p>Apple Pie</p>
+        </div>
+    </section>
+    
+    
+    
+    <footer>&copy;2025 SweetBite Bakery</footer>
+</body>
+</html>

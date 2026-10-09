@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            
+        }
+         .sun{
+                width: 120px;
+                height: 120px;
+                background-color: gold;
+                border-radius: 50%;
+                box-shadow: 0 0 60px yellow;
+                position: absolute;
+            }
+            .earth-orbit{
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                border-radius: 50%;
+                /* border: 1px solid white;  */
+                animation: rotateEarth 10s linear infinite;
+            }
+            .earth{
+                width: 40px;
+                height: 40px;
+                background-color: dodgerblue;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                justify-content: center;
+                align-items: center;
+                display: flex;
+        
+            }
+            .moon-orbit{
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                animation: rotateMoon 3s linear infinite;
+            }
+            .moon{
+                width: 15px;
+                height: 15px;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @keyframes rotateEarth{
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+            
+                }
+            {
+            @keyframes rotateMoon{
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            
+            }
+
+    </style>
+</head>
+<body>
+   <section>
+    <div class="sun"></div>
+
+             <div class="earth-orbit">
+                <div class="earth">
+                    <div class="moon-orbit">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+             </div>
+   </section>
+</head>
+</body>

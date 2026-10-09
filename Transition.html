@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            transition: color 5s, background 1s;
+        }
+        h1:hover{
+            color: rgb(166, 243, 224);
+            background-color: black;
+        }
+        .features{
+            transition: all 20s;
+        }
+        .features:hover{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+        /* btranslate(moves an element) */
+        
+        .box2{
+            width: 100px;
+            height: 120px;
+            background-color: pink;
+            transition: all 10s;
+
+            /* transform: translateX(30px); */
+            /* transform: translateY(-30px); */
+
+            /* transform: translate(20px, 20px); */
+        }
+        .box2:hover{
+           /* transform: translate(20px, 20px);   */
+           /* transform:translateX(-10px); */
+           transform: translate(-100px, 0px);
+           /* Individual axis */
+
+        }
+        /* Scale (to resize) makes element bigger or smaller*/
+        div{
+            margin-bottom: 10px;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+
+            transition:transform 5s;
+            /* value less than one  */
+            /* becomes smaller  */
+            /* transform:scaleX(0.2) */
+            /* transform: scaleX(1.1); */
+            /* transform: scaleY(1.3); */
+
+            /* transform: scale(1.2); */
+
+        }
+        .box3:hover{
+            transform: scale(1.3);
+        }
+        .box7{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: orange;
+            transition: all 7s;
+        }
+        .box7:hover{
+            transform: scale(0.5);
+
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+            transition: transform 5s ease-in-out ;
+            /* transform: rotate
+            {10deg};  */
+            
+
+        }
+        .box4:active{
+            transform: rotate(200deg);
+        }
+
+        /* Skew (To Tilt) */
+        .box5{
+            width: 100px;
+            height: 100px;
+            background: palevioletred;
+
+            /* transform: skewX(200deg);  */
+            /* transform: skewY(-20deg); */
+            transform: skew(200deg, 30deg);
+        }
+        box6{
+            width: 100px;
+            height: 100px;
+            background: violet;
+            margin-top: 20px;
+
+            /* transform: translateX(100px) rotate(45deg) scale(1.2);  */
+
+            transition: transform 3s;
+        }
+        .box6:hover{
+            transform: translateX(100px) rotate(45deg) scale(1.2);
+        }
+        .box7{
+            width: 100px;
+            height: 100px;
+            background: lawngreen;
+            margin-top: 20px;
+
+            /* transform: rotate(45deg); */
+            /* transform-origin: top left; */
+            /* transform-origin: center; */
+            /* transform-origin:bottom right; */
+
+            transition: all 2s;
+
+        }
+        .box7:hover{
+            transform: rotate(45deg);
+            transform-origin: top-left;
+            /* transform-origin: center; */
+            transform-origin: bottom right;
+        }
+        .moving-box{
+            width: 100px;
+            height: 100px;
+            background: teal;
+
+            border-left: 8px solid tan;
+
+            animation:   moveBox 10s infinite
+            alternate ease-in-out;
+        }
+        @keyframes moveBox{
+            from{
+                transform: translateX(0px);
+            }
+
+            to{
+                transform: translateX(600px);
+            
+            }
+
+            }
+        h2{
+            animation:changeColor 3s infinite alternate ease;
+        }
+       @keyframes changeColor {
+
+            0%{
+                color: black;
+            }
+            
+            50%{
+                color:pink;
+            }
+
+            100%{
+                color:plum;
+            }
+       
+        }
+        .spinner{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 6px solid lightgray;
+            border-top: 6px solid gold;
+
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+            }
+        
+            100%{
+                transform: rotate(360deg);
+            }
+
+        }
+        section{
+            animation: slideIn 5s;
+        }
+
+        @keyframes slideIn{
+            0%{
+                transform: translateX(-200px);
+                opacity: 0;
+               }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+              }
+        }
+
+
+
+         .heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 90px;
+             height: 90px;
+             background: blue;
+            border-radius: 50%;
+
+             position:absolute;
+            }
+            .heart::after{
+                top: -50px;
+            }
+            .heart::before{
+              left: 50px;
+            }
+
+
+            @keyframes beat{
+                0%{
+                    transform: rotate(-45deg) scale(1);
+                }
+                50%{
+                    transform: rotate(-45deg) scale(1.2);
+                }
+                100%{
+                    transform: rotate(-45deg) scale(1);
+                }
+
+                .bell{
+                    font: size 80px;
+                    display: inline-block;
+
+                    animation:ShakeAndBounce 1s infinite alternate;
+                    transform-origin:top center;
+                }
+                @keyframes shakeAndBounce{
+                    0%{
+                        transform: rotate(0deg) translateY(0);
+                    }
+                    25%{
+                        transform: rotate(-15deg) translateY(-5px);
+                    }
+                    50%{
+                        transform: rotate(15deg) translateY(0);
+                    }
+                    75%{
+                        transform: rotate(-10deg) translateY(-3px);
+                    }
+                    100%{
+                        transform: rotate(0deg) translateY(0);
+                    }
+                } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            
+
+             {
+            
+
+                
+                 
+
+
+                
+                
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                heart::before{
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+        
+
+            }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+        
+
+                }
+                 .heart::before{
+                    
+                 } heart{
+                background:red;
+                width: 100px;
+                height: 100px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: beat 1s infinite;
+
+
+                margin: 60px;
+            }
+
+            .heart::before,
+            .heart::after{
+             content: '';
+             width: 100px;
+             height: 100px;
+             background: blue;
+
+             position:absolute;
+
+             {
+                
+
+                }
+                 .heart::before{
+                    
+                 }
+               .bell{
+                font-size: 80px;
+                display:inline-block;
+
+                animation: shakeAndBounce  10s infinite alternate ease;
+                transform-origin: top;
+               }
+               @keyframes shakeAndBouncer{
+                 0%{
+                    transform: rotate(30deg) translateY(0);
+                 }
+                 25%{
+                    transform: rotate(80deg) translateY(-5px);
+                 }
+                 50%{
+                    transform: rotate(15deg) translateY(0);
+                 }
+                 75%{
+                    transform: rotate(10deg) translateY(-3px);
+                 }
+                 100%{
+                    transform: rotate(0deg) translateY(0);
+                 }
+                    loader{
+                      width: 300px;  
+                      height: 20px;
+                      background: #ddd;
+                      border: radius 10px;
+                      overflow:hidden;
+
+                      position: relative;
+                    }
+                 
+                 .progress{
+                    height: 100px;
+                    width: 0;
+                    background:blue;
+
+                    animation: load 2s ease-in-out infinite;
+                    
+                 }
+                 @keyframes load{
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 100%;
+                    
+                 }
+               }
+            </style>
+
+    </head>
+    <body>
+   <h1>CSS Transition</h1> 
+   <p>A transition makes a Css property change smoothly over time instead of instantly.</p>
+
+   <pre>
+     without transition &rarr; change happens immediately
+
+
+     With transition &rarr; change happens gradually
+
+   </pre>
+   <div>
+    <div class="features">bluebox</div>
+    </div>
+   <h2>CSS Transform </h2>
+   <p>Transform lets you move, rotate, scale, or distort elements without affecting layout.</p>
+   
+   <div class="box2"></div>
+    
+
+   <div class="box3"></div>
+
+   <div class="box4">Rotate</div>
+
+   <div class="box5">SKEW</div>
+
+
+   <div class="box6">Multiple Transforms</div>
+
+   <!-- classwork  -->
+    <div class="box7"></div>
+    <h2>CSS Animation</h2>
+    <p>Animation runs automatically without hover. </p>
+    <p>Example: a box moving across the screen</p>
+    <p>But animations need @Keyframes.</p>
+
+    <div class="moving-box"></div>
+
+
+    <h2>@Keyframes</h2>
+    <p>@Keyframes defines how the animations changes over time</p>
+
+    <div class="spinner"></div>
+
+
+
+    <div class="heart"></div>
+
+
+
+
+    <div class="bell">🔔</div>
+
+
+
+    <div class="loader">
+        <div class="progress"></div>
+    </div>
+</body>
+</html>

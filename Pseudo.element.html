@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .p::before{
+            content: "I hate ";
+
+        }
+        .p::after{
+            content: " and rice ♒";
+        }
+        .p::selection{
+            background: yellow;
+            color: red;
+        }
+        h1::selection{
+            background: yellow;
+            color: red;
+        }
+        h1::first-letter{
+            color: peru;
+        }
+
+        .lorem::first-line{
+        color: thistle;
+        }
+        
+        input::placeholder{
+            color: navy;
+            font-style: italic;
+        }
+
+        li::marker{
+            color: blue;
+            font-style: italic;
+        }
+
+        input::file-selector-button{
+            background-color: blue;
+            color:white;
+            border:none;
+            padding: 6px 10px;
+            border-radius: 6px;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>PSeudo Elements</h1> 
+
+    <p class="p">Beans</p>
+
+    <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores velit doloremque autem, cumque sint nulla quia quos, reiciendis necessitatibus fuga excepturi unde pariatur veniam, dolor obcaecati consequuntur repudiandae? Esse, mollitia!</p>
+
+    <input type="text" placeholder="Enter your name" >
+
+    <ul>
+        <li>Biscuits</li>
+        <li>Chocolate</li>
+        <li>Sweets</li>
+        <li>Candy</li>
+        <li>Cake</li>
+        <li>Custard pie</li>
+    </ul>
+
+    <input type="file">
+    
+    
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            overflow: hidden;
+            height: 100vh;
+        }
+        .sky{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom,#87ceeb, #dff6ff);
+            position: relative;
+        }
+        .sun{
+            width: 100px;
+            height: 100px;
+            background:gold;
+            border-radius: 50%;
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            box-shadow: 0 0 40px gold;
+            animation: spin 10s linear infinite;
+        }
+        .sun::before{
+            content: "";
+            position: absolute;
+            inset: -20px;
+            border:4px dashed orange;
+            border-radius: 50%;
+        }
+        @keyframes spin{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            }
+            .cloud{
+                width: 120px;
+                height: 50px;
+                background: white;
+                border-radius: 50px;
+                position: absolute;
+            }
+            .cloud::before,
+            .cloud::after{
+                content: "";
+                position: absolute;
+                background: white;
+                border-radius: 50%;
+            }
+             .cloud::before{
+                width: 60px;
+                height: 60px;
+                top: -25px;
+                left: 15px;
+             } 
+             .cloud::after{
+                width: 70px;
+                height: 70px;
+                top: -35px;
+                right: 15px;
+             }      
+              .cloud1{
+                top: 100px;
+                animation: cloudMove 30s linear infinite;
+              }  
+            .cloud2{
+                top: 220px;
+                animation: cloudMove 40s linear infinite;
+            }
+            .cloud3{
+                top: 150px;
+                animation: cloudMove 50s linear infinite;
+           
+
+           } 
+           @keyframes cloudMove{
+            from{
+                transform: translateX(-200px);
+            }
+            to{
+                transform: translateX(120vW);
+            }
+           }
+
+           .airplane{
+            font-size: 80px;
+            position: absolute;
+            top: 50%;
+            left: -250px;
+            width: 220px;
+            height: 70px;
+            animation: fly 8s linear infinite;
+           }
+           .body{
+            width: 140px;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 20px;
+            position: absolute;
+            left: 40px;
+            top: 20px;
+           }
+           .nose{
+            width: 40px;
+            height: 30px;
+            background-color: #d0d0d0;
+            border-radius: 50%;
+            position: absolute;
+            left:170px;
+            top:20px;
+           }
+           .tail{
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 40px solid #c0c0c0;
+             position: absolute;
+            left: 20px;
+            top: -5px;
+           }
+           .wing-top{
+            width: 70px;
+            height: 15px;
+            background-color: #c0c0c0;
+            position: absolute;
+            left: 70px;
+            top: 5px;
+            transform: rotate(-20deg);
+           }
+           .wing-bottom{
+            width: 70px;
+            height: 15px;
+            background-color: #c0c0c0;
+            position: absolute;
+            left: 70px;
+            top: 40px;
+            transform: rotate(20deg);
+           }
+           
+
+           .window{
+                width: 10px;
+                height: 10px;
+                background: skyblue;
+                border-radius: 50%;
+                position: absolute;
+                top: 30px;
+           }
+           .w1{left: 70px;}
+           .w2{left: 90px;}
+           .w3{left: 110px;}
+           .w4{left: 130px;}
+
+           @keyframes fly{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(calc(100vw + 100px));
+            }
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="sky">
+        <div class="sun"></div>
+
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+
+        <div class="airplane">
+            
+            <img src="download-removebg-preview (2).png" alt="">
+            
+            <!-- <div class="tail"></div>
+            <div class="wing-top"></div>
+            <div class="wing-bottom"></div>
+            <div class="body"></div>
+            <div class="nose"></div>
+
+            <div class="window w1"></div>
+            <div class="window w2"></div>
+            <div class="window w3"></div>
+            <div class="window w4"></div> -->
+        </div>
+    </div>
+</body>
+</html>

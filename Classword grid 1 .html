@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        .gridContainer1{
+            display: grid;
+            grid-template-columns: 80px 80px 80px;
+            grid-template-rows: 85px 200px ;
+            border: 7px solid; 
+            gap: 10px;
+
+            padding: 10px;
+            width: 260px;
+            
+        }
+        .gridContainer1 div:first-child{
+             background-color: blue;
+             grid-column: 1/-1;
+             
+        }
+        .gridContainer1 .box{
+             background-color:green;
+             
+        }
+        .gridContainer2{
+             display: grid;
+            grid-template-columns: 80px 80px 80px;
+            grid-template-rows: 125px 200px ;
+            border: 7px solid; 
+            gap: 10px;
+
+            padding: 10px;
+            width: 260px;
+            margin-top: 10px;
+        }
+        .box2{
+             grid-column: 1/3;
+             background-color: blueviolet;
+        }
+        .box3{
+            background-color: brown;
+             grid-column: 3/4;
+        }
+        .box5{
+             grid-column: 3/4;
+        }
+         .box4{
+               grid-column: 1/3;
+         }
+        .box4, .box5{
+            background-color: #e85e5e;
+        }
+        .gridContainer3{
+            display: grid;
+            grid-template-columns: 80px 80px 80px;
+            grid-template-rows: 200px 75px;
+            border: 7px solid; 
+            gap: 10px;
+
+            padding: 10px;
+            width: 260px;
+            margin-top: 10px;
+        }
+        .gridContainer3 .box1,.box2, .box3{
+               background-color: blue;
+               
+        }
+        .gridContainer3 .box4, .box5{
+             background-color: purple;
+        }
+        .gridContainer3 .box1{
+          grid-row: 1/2;
+        }
+        .gridContainer3 .box2{
+          grid-column: 2/3;
+        }
+        .Container{
+           display: grid;
+          grid-template-columns: 80px 80px 80px;
+          grid-template-rows: 125px 200px ;
+          border: 7px solid; 
+          gap: 10px;
+            background-color: white;
+            padding: 10px;
+            width: 260px;
+            margin-top: 10px;
+        }
+        .gridContainer4{
+          background-color: blue;
+           width: 350px;
+           height: 300px;
+           display: grid;
+           place-items: center;
+           margin-top: 15px;
+        }
+        .gridContainer4.box{
+           padding: 3px;
+           grid-column: 1/3;
+           background-color: rgba(225, 104, 110, );
+        }
+         .gridContainer4.box2{
+             grid-column: 3/4;
+             grid-row: 1/-1;
+         }
+         .gridContainer4.box3{
+          grid-column: 1/3;
+            background-color: blueviolet;
+         }
+         
+    </style>
+</head>
+<body>
+     <section class="gridContainer1">
+      <div class="box1"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+     </section>
+     
+
+     <section class="gridContainer2">
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+     </section>
+
+     <section class="gridContainer3">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+     </section>
+
+     <section class="gridContainer4">
+     <div class="container">
+       <div class="box1"></div>
+       <div class="box2"></div>
+       <div class="box3"></div>
+       </div>
+     </section>
+</body>
+</html>

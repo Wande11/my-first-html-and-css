@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .trafficl{
+        width: 60px;
+        height: 175px;
+        background-color: black;
+        border-radius: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        text-align: center;
+        }
+        .red{
+            width: 50px;
+            height: 50px;
+            align-content: center;
+            border-radius: 50%;
+            background-color: white;
+            margin-bottom: 5px;
+
+            animation: color 7s infinite;
+        }
+        @keyframes color {
+
+        }
+       .yellow{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        align-content: center;
+        background-color: white;
+        margin-bottom: 5px;
+       }
+       .green{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        align-content: center;
+        background-color: white;
+       }
+       .sola{
+         position: relative;
+         width: 200px;
+         height: 200px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: url(download.jfif);
+       }
+       .center-object{
+         font-size: 50px;
+         width: 50px;
+         height: 50px;
+         z-index: 2;
+       }
+       .orbit-wrapper{
+         width: 60px;
+         height: 60px;
+         z-index: 2;
+       }
+       .orbit-wrapper{
+         width: 60px;
+         height: 60px;
+         z-index: 2;
+       }
+       .hero{
+         text-align: center;
+       }
+       .left{
+        animation: SlideLeft 3s;
+       }
+       @keyframes Slideleft {
+         0%{
+            transform: translateX(-500px);
+            
+         }
+         100%{
+            transform: translateX(0px);
+         }
+       }
+       .right{
+        animation: Slideleft 3s;
+       }
+       .button{
+        text-align: center;
+       }
+       .center-object{
+        text-align: center;
+
+    
+       }
+       .button{
+         animation: slidebutton 3s;
+       }
+       @keyframes slidebutton {
+         0%{
+            transform: translateY(50px);
+            opacity: 0;
+         }
+         100%{
+            transform: translateY(0px);
+            opacity: 0;
+         }
+       }
+       .heart{
+        background:red;
+                width: 90px;
+                height: 90px;
+                position: relative;
+
+                transform: rotate(-45deg);
+                animation: jump 1s infinite;
+         border: 1px solid;
+
+                margin: 200px;
+               
+               }
+               .heart::before,
+               .heart::after{
+                  content: '';
+                  width: 75px;
+                  height: 75px;
+               background: red;
+               border-radius: 50%;
+
+                  position: absolute;
+               }
+               .heart::before{
+                  top: -40px;
+               }
+               .heart::after{
+                  left: 40px;
+               }
+               @keyframes jump {
+                  from{
+                     transform: translatex(100px) ;
+                  }
+                  to{
+                     transform: translateY(300px);
+                  }
+               }
+               
+       
+       .notification{
+        position: fixed;
+         top: -100px;  /* Hidden above the screen */ ;
+        transform: translateX(-50%);
+        background-color: #4CAF50; /*Green background*/
+        color: white;
+        padding: 16px 24px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        font-family: sans-serif;
+        font-size: 16px;
+        z-index: 1000;
+        transition: top 0.5s ease-in-out; /*smooth sliding animation*/
+       }
+       .first{
+         font-size: 30px;
+         animation: Bouncingball 4ms infinite alternate ease;
+       }
+       @keyframes Bouncingball {
+         0%{
+            transform: translateY(60px);
+            opacity: 0;
+         }
+         100%{
+            transform: translate(0px);
+            opacity: 1;
+         }
+       }
+       .Fourth{
+         font-size: 40px;
+         animation: Movingcar 5s infinite ease-in-out;
+       }
+       @keyframes Movingcar {
+         from{
+            transform: translateX(100px);
+         }
+      
+         to{
+            transform: translateX(300px);
+
+       
+        
+       }
+      }
+
+            
+            
+        
+    </style>
+</head>
+<body>
+    <h1>Animation exercise</h1>
+    <div class="trafficl">0
+    <div class="red">Stop</div>
+    <div class="yellow">Ready</div>
+     <div class="green">Go</div>
+     </div>
+
+     <section class="hero">
+        <h3 class="left">This is an heading</h3>
+        <p class="right">This is a paragraph</p>
+        <button class="button">Button</button>
+     </section>
+
+     <div class="sola">
+        <div class="center-object">☀</div>
+        <div class="orbit-wrapper">🌑</div>
+        <div class="orbit-wrapper">🌙</div>
+        <div class="moving-object"></div>
+     </div>
+
+     <div class="heart">
+
+        
+     </div>
+     <div id="auto-notification" class="notification">
+        <h3>Message sent Successfully</h3>
+
+
+     </div>
+     <div>
+     <div class="section"></div>
+     <div class="first">⚽</div>
+     </div>
+     <div class="Third"></div>
+     <div class="Fourth">🚕</div>
+     </div>
+     
+
+
+</body>
+</html>

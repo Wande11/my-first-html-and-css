@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flexContainer{
+            /* border: 1px solid; */
+            display: flex;
+            height: 300px;
+            /* flex-direction:row-reverse; */
+
+            /* horizontal alignment (left-right) */
+            justify-content: space-evenly;
+
+            /* vertical-alignment (up - down)*/
+            align-items:center;
+
+            flex-wrap: wrap;
+            gap: 7px;
+            
+        }
+        .item{
+            background: green;
+            width: 100px;
+            height: 100px;
+            color: white;
+            
+        }
+
+        .flexContainer2{
+            border: 1px solid;
+            display: flex;
+            gap: 3px;
+        }
+
+        .box{
+            background-color: purple;
+            color: white;
+            height: 100px;
+        }
+        .box1{
+            flex-grow: 1;
+        }
+        .box2{
+            flex-grow: 2;
+        }
+        .box3{
+            flex-grow: 3;
+        }
+        .container{
+            display: flex;
+            gap: 5px;
+            /* width: 300px; */
+        }
+        .child{
+            background-color: pink;
+            width: 150px;
+            height: 100px;
+        }
+
+        .child1{
+            flex-shrink: 0;
+        }
+        .child2{
+            flex-shrink: 2;
+        }
+        .child3{
+            flex-shrink: 1;
+        }
+        .container2{
+            display: flex;
+            gap: 5px;
+        }
+        .baby{
+            flex-basis: 100px;
+            background-color: palevioletred;
+            height: 100px;
+
+        }
+        baby1{
+            flex-basis: 100px;
+
+         }
+         .baby2{
+            flex-basis: 200px;
+         }
+          .baby3{
+            flex-basis:100px;
+         }
+         .container3{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+         }
+         .card{
+            flex: 1 1 200px;
+            background-color: gold;
+            height: 100px;
+         }
+    </style>
+</head>
+<body>
+    <h1>CSS FLEX BOX</h1>
+    <p>Flexbox is a layout that helps you arrange items in a row or column without stress.</p>
+
+    <div class="flexContainer">
+       <div class="item">item 1</div>
+       <div class="item">item 2</div>
+       <div class="item">item 3</div>
+       <div class="item">item 4</div>
+       <div class="item">item 5</div>
+    </div>
+    <h2>Flex Grow</h2>
+    <p>It controls how much an item should expand compared to others</p>
+    <div class="flexContainer2">
+        <div class="box box1">item1</div>
+        <div class="box box2">item2</div>
+        <div class="box box3">item3</div>
+    </div>
+    <h2>Flex Shrink</h2>
+    <p>It controls how items Shrink when there is not enough space</p>
+
+    <div class="container">
+        <div class="child child1">child 1</div>
+        <div class="child child2">child2</div>
+        <div class="child child3">child3</div>
+    </div>
+
+    <div>
+        <h2>Flex Basis</h2>
+        <p>Is the starting size of a flex item before anything changes</p>
+        <div class="container2">
+            <div class="baby baby1"></div>
+            <div class="baby baby2"></div>
+            <div class="baby baby3"></div>
+    </div>
+    <h2>Flew grow + Shrink + basis</h2>
+    <ol>
+        <li>flex-basis: each card starts at 200px</li>
+        <li>flex-grow: if there is extra space, cards expand equally</li>
+        <li>flex-shrink: if screen is small, cards shrink to fit</li>
+    </ol>
+    <div class="container3">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+
+    </div>
+</body>
+</html>

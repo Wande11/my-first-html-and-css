@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: none;
+        }
+
+        td{
+            padding: 10px;
+        }
+
+        tr{
+            border-bottom: 1px solid;
+        }
+
+        div{
+            width: 20px;
+            height: 20px;
+            border: 1px solid;
+            margin: 10px;
+            text-align: center;
+            display: inline;
+            padding: 2px;
+        }
+        /* Selectors */
+        /* First child */
+        tr:nth-child(1) td:last-child div:first-child{
+            background: #2498db;
+        }
+        /* Last child */
+        tr:nth-child(2) td:last-child div:last-child{
+            background: #2498db;
+        }
+        /* nth-child(2)  */
+        tr:nth-child(4) td:last-child div:nth-child(2){
+            background: #2498db;
+        }
+        /* nth-last-child(2)  */
+        tr:nth-child(5) td:last-child div:nth-child(odd){
+            background: #2498db;
+        }
+        /* :nth-child(even)  */
+        tr:nth-child(6) td:last-child div:nth-child(even){
+            background: #2498db;
+
+        }
+        /* nth-child(4) */
+        tr:nth-child(7) td:last-child div:nth-child(n+4){
+            background: #2498db;
+        }
+        /* :nth-last-child(2) */
+        tr:nth-child(3) td:last-child div:nth-child(2){
+            background: #2498db;
+        }
+
+    </style>
+</head>
+<body>
+   <h1>N <sup>th</sup> Child Selectors in css</h1>
+   <p>The :nth-child() selector in css is Pseudo-class that  lets you style elements based on their position (order) inside their parent.</p> 
+   <p>n represents a number, Keyword or formuler .</p>
+
+   <table border="1">
+        <tr>
+            <td>first-child</td>
+            <td>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>last-child</td>
+            <td>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>nth-child(2)</td>
+            <td>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </td>
+        </tr>
+        <tr>
+        <td>nth-last-child(2)</td>
+        <td>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </td>
+        </tr>
+        <tr>
+            <td>nth-child(odd)</td>
+            <td>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>nth-child(even)</td>
+            <td>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </td>
+        </tr>
+        <tr>
+            <td>nth-child(n+4)</td>
+            <td>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </td>
+        </tr>
+   </table>
+</body>
+</html>

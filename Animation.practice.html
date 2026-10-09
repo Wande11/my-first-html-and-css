@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+
+        }
+
+        nav{
+            display: flex;
+
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            padding: 10px;
+            transition: o.3s;
+        }
+        nav a:hover{
+            color: blue;
+            transform: translateY(-5px);
+
+            transition: all 0.3s;
+        }
+
+        header button{
+            padding: 5px 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: purple;
+            color: white;
+            cursor: pointer;
+
+            transition: all 0.3s;
+        }
+        header button:hover{
+            background-color: royalblue;
+            transform: scale(1.1) rotate(1deg);
+            box-shadow: 0 5px 6px rgba(0, 0, 0, 0.3); 
+
+            transition: all 0.3s;
+        }
+        .logo{
+          width: 40px ;  
+          height: 40px ;
+          background-color: blue;
+          font-size: 20px;
+          font-weight: 700;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          border-radius: 50%;
+
+
+          transition: transform 1s;
+        }
+        .logo:hover{
+            transform: rotate(360deg) scale(1.1) ;
+            cursor: pointer;
+        }
+
+        .notification-badge{
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            position:absolute;
+            top: 0;
+            right: 0;
+
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            50%{
+                transform: scale(1.4);
+                opacity: 0.6;
+            }
+            100%{
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            }
+
+            .right-section{
+                display: flex;
+                gap: 10px;
+                width: 20%;
+
+                
+            }
+
+            .notification-container{
+                position: relative;
+                font-size: 30px;
+            }
+
+            .hero{
+                padding: 10px 20px;
+                height: 70vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .typing{
+                font-family: monospace;
+                font-size: 40px;
+                width: 0;  /*start hidden */
+                white-space: nowrap; /*Keep text in one line */
+                overflow: hidden; /* hide extra text if text is overflowing */
+                border-right: 3px solid black; /*cursor effect */
+
+                animation: typing 4s steps(30) forwards, forwards;
+            }
+
+            /* typing effect */
+            @keyframes typing {
+                from{
+                    width: 0;
+                }
+                to{
+                    width: 38ch; /*number of characters*/;
+                }
+            }
+
+           /* cursor blinking */
+           @keyframes blink {
+            50%{
+                border-color: transparent;
+            }
+           }
+
+
+           .movie-card{
+            flex: 0 0 250px;
+            height: 300px;
+            border: 12px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+           }
+           /* card enlarges  */
+           .movie-card:hover{
+            transform: scale(1.08);
+           }
+
+           /* image */
+           .movie-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+           }>
+           /* image zooms in */
+           .movie-card:hover .movie-img img{
+            transform: scale(1.15);
+
+
+           }
+
+           /* Info Panel */
+           .movie-info{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9),transparent);
+            color: white;
+
+            transform: translateY(60%);
+            transition: transform 0.5s ease;
+           }
+           /* Details slide up */
+           .movie-card:hover .movie-info{
+            transform: translateY(0);
+           }
+           /* play button */ 
+            .play-button{
+                margin-top: 10px;
+                padding: 8px 12px;
+                border: none;
+                border-radius: 5px;
+                background: red;
+                color: white;
+                cursor: pointer;
+
+                opacity: 0;
+                transform: translateY(10px);
+                transition: 0.4s ease;
+            }
+            /* Play button fades in */
+            .movie-card:hover .play-button{
+                opacity: 1;
+                transform: translateY(0);
+            }
+           
+           
+            main{
+                padding: 10px 20px;
+                display: grid;
+                place-items: center;
+            }
+            .netflix-cards{
+                display: flex;
+                gap: 10px;
+                border: 4px solid;
+                width: 80%;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .other-animations{
+                margin-top: 20px;
+            }
+
+            .traffic-light{
+                background-color: #222;
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            .traffic-light{
+                background-color: #222;
+                padding: 20px;
+                border-radius: 15px;
+            }
+            .light{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin:10px 0;
+            }
+            .red{
+                animation: redlight 9s infinite;
+            }
+            .yellow{
+                animation: yellowlight 9s infinite
+            }
+            .green{
+                animation: greenlight 9s infinite;
+            }
+
+            @keyframes redlight{
+                0%, 33.33%{
+                    background-color: red;
+                    box-shadow: 0 0 20px yellow;
+                }
+                0%, 100%{
+                    background: #500;
+                    box-shadow: 0 0 20px black;
+                }
+            }
+                 @keyframes  yellowlight {
+                 33.33%, 66.66%{
+                    background: yellow;
+                    box-shadow: 0 0 20px yellow;
+                }
+                33.33%, 100%{
+                    background: #500;
+                    box-shadow: none;
+            }
+            }
+             @keyframes greenlight{
+                66.67%, 99.99%{
+                    background-color: green;
+                    box-shadow: 0 0 20px green;
+                }
+                99.99%, 100%{
+                    background-color: lime;
+                    box-shadow: none;
+                    
+                }
+            }
+            .pole{
+                width: 15px;
+                height: 180px;
+                background-color: #333;
+                margin-left: 50px;
+            }
+            .base{
+                width: 120px;
+                height: 20px;
+                background-color: #111;
+                border-radius: 5px;
+            }
+            .sun{
+                width: 120px;
+                height: 120px;
+                background-color: gold;
+                border-radius: 50%;
+                box-shadow: 0 0 60px yellow;
+                position: absolute;
+            }
+            .earth-orbit{
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                border-radius: 50%;
+                animation: rotateEarth 10s linear infinite;
+            }
+            .earth{
+                width: 40px;
+                height: 40px;
+                background-color: dodgerblue;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                justify-content: center;
+                align-items: center;
+        
+            }
+            .moon-orbit{
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                animation: rotateMoon 3s linear infinite;
+            }
+            .moon{
+                width: 15px;
+                height: 15px;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @keyframes rotateEarth{
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+    </style>
+</head>
+<body>
+     <header>
+        <!-- rotating logo -->
+        <div class="logo">R</div>
+
+        <!-- sliding Navigation -->
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+       <div class="right-section">
+        <!-- pulsing notification badge -->
+         <div class="notification-container">
+            🔔
+            <div class="notification-badge">7</div>
+         </div>
+         
+         <!-- hover button animation -->
+          <button>Log In</button>
+       </div>
+       
+     </header>
+
+     <section class="hero">
+        <!-- Typing animation -->
+        <h1 class="typing">I am Learning Frontend Development 💻</h1> 
+     </section>
+
+
+        
+
+
+     <main>
+        <section class="netflix-cards">
+            <!-- netflix-style-movie card (hover animation) -->
+        <div class="movie-card">
+            <div class="movie-img">
+                <img src="incs.jfif" alt="Inception">
+            </div> 
+        
+            <div class="movie-card">
+                <h3>Inception</h3>
+                <p>A mind-bending thriller against dreams within dreams.</p>
+                <button class="play-button">▶ play</button>
+            </div>
+        </div>    
+
+         <div class="movie-card">
+            <div class="movie-img">
+                <img src="incs.jfif" alt="Inception">
+            </div> 
+        
+            <div class="movie-card">
+                <h3>Inception</h3>
+                <p>A mind-bending thriller against dreams within dreams.</p>
+                <button class="play-button">▶ play</button>
+            </div>
+        </div>    
+
+         <div class="movie-card">
+            <div class="movie-img">
+                <img src="incs.jfif" alt="Inception">
+            </div> 
+        
+            <div class="movie-card">
+                <h3>Inception</h3>
+                <p>A mind-bending thriller against dreams within dreams.</p>
+                <button class="play-button">▶ play</button>
+            </div>
+        </div>    
+        </section>
+
+        <section class="other animations">
+            <div class="traffic-container">
+            <!-- Traffic light Animation -->
+            <div class="traffic-light">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+            </div>
+
+            <div class="pole"></div>
+            <div class="base"></div>
+            
+            </div>
+
+
+            <!-- Solar system animation -->
+             <div class="sun"></div>
+
+             <div class="earth-orbit">
+                <div class="earth">
+                    <div class="moon-orbit">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+
+     </main>
+</body>
+</html>

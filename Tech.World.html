@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech World</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+       
+        section,
+        article,
+        aside,
+        footer{
+            border: 10px solid #222;
+            padding: 16px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+         header{
+            background-color: tan;
+            padding: 14px 13px;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            margin-bottom: 600px;
+         }
+         h1{
+            background-color: blue;
+            color: yellow;
+            font-style: italic;
+            font-family: fantasy;
+            font-weight: 100;
+            color: black;
+            flex-wrap: nowrap;
+         }
+        nav a{
+          margin-right: 5px;
+          margin-left: 10px;
+          color: chocolate;
+        }
+        nav a:hover{
+         color: black;
+         border: 1px solid blue;
+         padding: 3px 5px;
+         border-radius: 3px;
+        }
+
+        header button{
+            padding: 3px 8px;
+            border: none;
+            border-radius: 3px;
+            background-color: black;
+            color: white;
+        }
+        header button:hover{
+            background: transparent;
+            border: 1px solid teal;
+            color: black;
+            cursor: pointer;
+
+        }
+        main{
+            margin-top: 100px;
+        }
+        section{
+            background-color: blue;
+        }
+        h2{
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        article{
+            background-color: green;
+            box-shadow: 3px, 4px teal;
+
+        }
+         .f-article{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            
+
+
+        }
+        .f-article div{
+            border: 1px solid; 
+            height: 200px;
+        }
+
+        footer{
+            background-color: yellow;
+            padding: 14px 13px;
+            color: white;
+        }
+        details{
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        summary{
+            cursor: pointer;
+            font-weight: bold;
+            color: #222;
+        }
+        summary:hover{
+            background-color: lightgray;
+        }
+        aside{
+            background-color: blueviolet;
+            font-size: 20px;
+            
+        }
+        details{
+            background-color: blanchedalmond;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tech World</h1>
+
+        <nav>
+            <a href="">Home</a><a href="">Article</a><a href="">About</a><a href="">Contact</a>
+        
+        </nav>
+
+        <button>Search</button>
+    </header>
+    <main>
+        <section>
+            <h2>Latest Articles</h2>
+            <article class="f-article">
+                <div>
+
+                </div>
+
+                <figure>
+                    <img src="indomie.jpg" alt="hacker" width="200">
+                    <figcaption>
+                        A Blue team cyber security analyst
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h3>Why Learn Css?</h3>
+                <p>Css helps you style your website and make it look attractive .</p>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Quick Tips</h2>
+            <ul>
+                <li>Practice daily.</li>
+                <li>Build projects</li>
+                <li>Read documentation</li>
+            </ul>
+        </aside>
+
+        <details>
+            <summary>Click to read more...</summary>
+            <p>Semantic Html improves accessibility , SEO and code readability .</p>
+        </details>
+    </main>
+
+    <footer>
+        <address>Email: Wendy@gmail.com</address>
+        <p>Published on <time datetime="2026-08-12">June 5, 2026</time></p>
+        <p>
+            <p>&copy; 2026 Tech World. Developed by Wendy.All rights Reserved.</p>
+        </p>
+    </footer>
+</body>
+</html>

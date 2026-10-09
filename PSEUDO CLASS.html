@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 5px 12px;
+            border-radius: 4px;
+        }
+        button:active{
+            background: #000;
+            color: white;
+            border: 10px solid green ;
+        }
+        h1:active{
+            color: green;
+        }
+        h1:hover{
+            text-decoration: underline blue;
+            color: thistle;
+        }
+        h1:target{
+            background: #000;
+        }
+        input:focus{
+            outline: 20px solid blue;
+        }
+
+        button:focus-visible{
+            outline: 3px solid hotpink;
+        }
+
+        .box:focus-within{
+            border: 20px solid palegoldenrod;
+            padding: 13px 20px;
+        }
+          /* visited link */
+        a:link{
+            color: plum;
+        }
+
+        input:checked{
+            accent-color: pink;
+        }
+
+        input:disabled{
+            opacity: 0.5;
+        }
+        input:enabled{
+            border-color: purple;
+        }
+        input:required{
+            border-left: 4px solid teal;
+        }
+        /*
+        :valid
+        :invalid
+        :optional
+        */
+
+        /* child selection */
+        li:first-child{
+            color: darkcyan;
+        }
+        li:last-child{
+            color: pink;
+        }
+        li:nth-child(2){
+            color: aqua;
+        }
+        li:nth-child(4){
+            color:fuchsia;
+        }
+        li:nth-child(5){
+            color: blue;
+       }
+       li:nth-child(3) {
+        color: lime;
+       }
+
+       .boxes{
+        margin: 7px;
+       }
+
+
+       .boxes:first-child{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: green;
+
+       } 
+       .boxes:nth-child(2){
+        background-color: red;
+        height: 100px;
+        width: 100px;
+        border: 5px;
+        margin: 5px;
+       }
+       .boxes:nth-child(3){
+        background-color: pink;
+        width: 150px;
+        height: 100px;
+        margin: 5px;
+        border: 5px;
+       }
+       .boxes:nth-child(4){
+        background-color: blue;
+        width: 100px;
+        height: 120px;
+        margin: 4px;
+        border-radius: 50%;
+
+       }
+       .boxes:nth-child(5){
+        background-color: black;
+        width: 110px;
+        height: 130px;
+        border-radius: 3px;
+        margin: 3px;
+       }
+       .boxes:nth-child(6){
+        background-color: brown;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        border-radius: 5px;
+        border-radius: 50%;
+       }
+
+       
+       
+    </style>
+</head>
+<body>
+    <h1>PSEUDO CLASS</h1> 
+
+    <button>Click me</button> <br>
+
+    <a href="Google.com">Google.com</a> <br>
+
+    <label>Name:</label>
+
+    <input type="text">
+    
+    <div class="box">
+        <label>password:</label>
+        <input type="password">
+    </div>
+
+    <input type="checkbox" >
+    <ul>
+        <li>Biscuits</li>
+        <li>Chocolate</li>
+        <li>Sweet</li>
+        <li>Candy</li>
+        <li>Cake</li>
+        <li>Custard pie</li>
+    </ul>
+
+    <h1>Classwork</h1>
+    <p>Style these boxes differently .</p>
+    <div class="container">
+        <div class="boxes">Green circle</div>
+        <div class="boxes">red square</div>
+        <div class="boxes">pink rectangle</div>
+        <div class="boxes">blue oval</div>
+        <div class="boxes">black square</div>
+        <div class="boxes">brown circle</div>
+    </div>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-image: url('Gle.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;  
+            background-attachment: fixed; */
+            
+            /* background-shorthand */
+            background: url('Gle.jpg') no-repeat contain: fixed;
+        }
+        .glassbox{
+            background: rgba(255, 255, 255, 0.12);
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 7px rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(7px);
+
+            position: fixed;
+            top: 200px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Glass Morphism</h1>
+    <div class="glass-box">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       .gridContainer1{
+         display: grid;
+         grid-template-columns: 150px 100px;
+         grid-template-rows: 200px 200px ;
+         /* gap creates space between items */
+         gap: 5px;
+       }
+       .gridContainer1 div{
+         background-color: #aaa;
+
+          }
+
+          .gridContainer2{
+              display: grid;
+              gap: 5px;
+              /* grid-template-columns: 1fr 1fr; */
+              grid-template-columns: 1fr 2fr 3fr;
+                 /* width: 400px; */
+                 border: 2px solid;
+
+
+              /* grid-template-rows: 1fr 2fr; */
+              height: 700px;
+          }
+          .gridContainer2 div{
+            background-color: paleturquoise;
+
+
+          }
+          .gridContainer3{
+            display: grid;
+            gap: 5px;
+
+            /* instead of this */
+             grid-template-columns: 100px 100px 100px;
+
+             /* Do this: using repeat() function */
+             grid-template-columns: repeat(3, 200px);
+
+             /* OR */
+              /* grid-template-columns: repeat(2, 150px);  */
+          }
+          .gridContainer3 div{
+             background-color: purple;
+          }
+          .gridContainer4{
+               display: grid;
+               gap: 6px;
+               grid-template-columns: repeat(3, minmax (200px, 1fr));
+               grid-template-rows: repeat(2,100px);
+          }
+          .gridContainer4 div{
+              background-color: teal;
+          }
+          .gridContainer5{
+             display: grid;
+             gap: 8px;
+             grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+             grid-template-rows: repeat(2, 100px);
+          }
+          .gridContainer5 div{
+               background-color: tomato;
+          }
+          .gridContainer6{
+                display: grid;
+                gap: 6px;
+                grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+                grid-template-rows: repeat(2, 200px);
+
+          }
+          .gridContainer6 div{
+                background-color: blue;
+          }
+
+    </style>
+</head>
+<body>
+    <h1>CSS GRID</h1>
+    <p>CSS Grid is a two-dimensional layout system. <br> It allows you to arrange items in <b>Rows</b> and <b>COLUMNS</b>.</p>
+    <p>Unlike flexbox, which mainly works in both direction(row or column),Grid works in both directions at the same time.</p>
+     The grid system was popularized by the swiss style of graphic design, which debuted in the 1940s and 1950s. The swiss style is recognizable by its use of sans-serif type, primary colors and grid layouts.
+
+      <h3>grid template column and row</h3>
+    <section class="gridContainer1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </section>
+
+    <h3>FR</h3>
+    <p>fr means fraction</p>
+     <section class="gridContainer2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </section>
+
+    <h3>Repeating Functions</h3>
+    <section class="gridContainer3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </section>
+
+    <h3>minmax() function</h3>
+    <p>minmax() creates a responsive column. It's very useful for responsive layouts. </p>
+    <section class="gridContainer4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </section>                          
+
+    <h3>auto-fit</h3>
+    <p>This automatically fits as many columns as possible. <br>This is one of the most useful Grid patterns for responsive card layouts.</p>
+     <section class="gridContainer5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+         <div>2</div>
+        <div>3</div>
+        <div>4</div>
+     </section>
+
+     <h3>auto-fill</h3>
+    <p>looks similar but behaves differently by keeping empty tracks when space allows</p>
+     <section class="gridContainer6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+     </section>
+
+
+</body>
+</html>

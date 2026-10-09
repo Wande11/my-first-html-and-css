@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #f0f8f0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            width: 600px;
+            height: 400px;
+            gap: 10px;
+        }
+        .card{
+            flex: 1;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: black;
+            filter: grayscale(80%);
+            transition: flex .7s cubic-bezier(.25, 1, .5, 1);
+        }
+        .img1{
+            background: url('yandex.jfif')center/cover;
+        }
+        .img2{
+            background: url('canva.jfif')center/cover;
+        }
+        .img3{ 
+            background: url('logo.png') center/cover; 
+        }
+         .card:hover{
+            flex: 4;
+            filter: grayscale(0%);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card img1"></div>
+        <div class="card img2"></div>
+        <div class="card img3"></div>
+    </div>
+</body>
+</html>
